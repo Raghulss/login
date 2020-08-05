@@ -5,12 +5,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script language="javascript">
-  function display(){
-    alert(document.cookie);
-  }
+  function get()
+  {
+    var username = getCookie("username");
 
+    var userdecrypt =   CryptoJS.AES.decrypt(username, "randompass");
+    var user = userdecrypt.toString(CryptoJS.enc.Utf8);
+    console.log(user);
+
+  }
   </script>
 </head>
-<body onload = display()>
+<body onload = get()>
   <h1>Welcome User</h1>
 </body>
