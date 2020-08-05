@@ -22,8 +22,10 @@
     var passdecrypt =   CryptoJS.AES.decrypt(password, "randompass");
     var user = userdecrypt.toString(CryptoJS.enc.Utf8);
     var pass = passdecrypt.toString(CryptoJS.enc.Utf8);
-    console.log(user);
-    console.log(pass);
+    if (user=="andy") && (pass=="qwertyuiop"){
+      console.log(user,pass);
+      window.location='target.html';
+    }
   }
   function validate(form)
   {
