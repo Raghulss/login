@@ -20,10 +20,11 @@
     var userdecrypt =   CryptoJS.AES.decrypt(username, "randompass");
     var user = userdecrypt.toString(CryptoJS.enc.Utf8);
     console.log(user);
+    document.getElementById("welcome").innerHTML = "Welcome Back "+user+"!";
 
   }
   </script>
 </head>
 <body onload = get()>
-  <h1>Welcome User</h1>
+  <h1 class="welcome" id="welcome">Welcome User</h1>
 </body>
