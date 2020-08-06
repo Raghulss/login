@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web Design</title>
+  <title>Welcome</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script language="javascript">
@@ -15,16 +15,16 @@
   }
   function get()
   {
-    var username = getCookie("username");
+    var username = getCookie("user");
 
-    var userdecrypt =   CryptoJS.AES.decrypt(username, "randompass");
-    var user = userdecrypt.toString(CryptoJS.enc.Utf8);
-    console.log(user);
-    document.getElementById("welcome").innerHTML = "Welcome Back "+user+"!";
+//     var userdecrypt =   CryptoJS.AES.decrypt(username, "randompass");
+//     var user = userdecrypt.toString(CryptoJS.enc.Utf8);
+    console.log(username);
+    document.getElementById("welcome").innerHTML = "Welcome Back "+username+"!";
 
   }
   </script>
 </head>
 <body onload = get()>
-  <h1 class="welcome" id="welcome">Welcome User</h1>
+  <h1 class="welcome" id="welcome">Welcome Back, </h1>
 </body>
