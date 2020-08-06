@@ -31,6 +31,7 @@
   {
    if(form.username.value == "andy" && form.password.value == "qwertyuiop")
     {
+      var user = form.username.value
       if(form.remember.checked== true)
       {
         let usernameencrypted = CryptoJS.AES.encrypt(form.username.value, "randompass");
@@ -38,6 +39,7 @@
         document.cookie = "username="+usernameencrypted+"; max-age=60;";
         document.cookie = "password="+passwordencrypted+"; max-age=60;";
       }
+      document.cookie = "user="+user;
       alert('Login Successful');
       window.location = 'target.html';/*opens the target page while Id & password matches*/
     }
