@@ -33,7 +33,7 @@ function validate(form)
       document.cookie = "password="+passwordencrypted+"; max-age=60;";
     }
     alert('Login Successful');
-    window.location = 'target.html';/*opens the target page while Id & password matches*/
+    window.location = '../target.html';/*opens the target page while Id & password matches*/
   }
  else
  {
